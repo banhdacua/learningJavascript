@@ -1,0 +1,19 @@
+.Bai_1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+button {
+    width: 7vw;
+    height: 5vh;
+    margin: 0 auto;
+}
+.Bai_3 {
+    margin-top: 50px;
+}
+.Bai_6 {
+    margin-top: 100px;
+}
+.Bai_6 button {
+    width: fit-content;
+}
