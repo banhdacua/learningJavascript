@@ -43,3 +43,33 @@ function funBai3() {
     n = arrN.toString().replaceAll(',','');
     document.getElementById("daoNguocChuSo").innerHTML = n;
 }
+function funBai4() {
+    let n = document.getElementById("arrNumN").value;
+    let arrNumN = n.split(' ').map(Number);
+    let indexAm = 0, indexDuong = 0;
+    
+    let arrDuong =[];
+
+    arrNumN.forEach(element => {
+        if( element < 0 ) {
+            indexAm = indexAm + 1;
+        }
+        if( element > 0 ) {
+            arrDuong[indexDuong] = element;
+            indexDuong = indexDuong + 1;
+        }
+    });
+    let maxDuong = arrDuong[0], minDuong = arrDuong[0];
+    for(let i = 0; i < arrDuong.length; i++) {
+        if( maxDuong < arrDuong[i] ) {
+            maxDuong = arrDuong[i];
+        }
+        if( minDuong > arrDuong[i] ) {
+            minDuong = arrDuong[i];
+        }
+    }
+    let ketqua1 = "Số các số âm: " + indexAm + " || Số các số dương: " + indexDuong;
+    document.getElementById("outputIndex").innerHTML = ketqua1;
+    let ketqua2 = "Số dương lớn nhất " + maxDuong + " || Số dương nhỏ nhất " + minDuong;
+    document.getElementById("outputMaxMin").innerHTML = ketqua2
+}
